@@ -1,0 +1,469 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+<link rel=”canonical” href=”http://example.com/index.hml” />
+
+
+
+ <!-- ***** Search Area ***** -->
+ <div id="search">
+    <button type="button" class="close">×</button>
+    <form id="contact" action="#" method="get">
+        <fieldset>
+            <input type="search" name="q" placeholder="SEARCH KEYWORD(s)" aria-label="Search through site content">
+        </fieldset>
+        <fieldset>
+            <button type="submit" class="main-button">Search</button>
+        </fieldset>
+    </form>
+</div>
+
+
+<!-- ***** particles kullandığım bölüm ***** -->
+
+
+<div id="particles-js"></div>
+
+<script src="particles.js"></script>
+
+
+
+
+
+<!-- ***** Main Banner Area Start ***** -->
+<div class="main-banner header-text" id="top">
+    <div class="Modern-Slider">
+      <!-- Item -->
+      <div class="item">
+        
+        <div class="img-fill">
+            <img src="{% static 'assets/images/ana2.jpg' %}" alt="Resim Bulunamadı" style="opacity: 0.5;">
+           
+
+            
+            <div class="text-content">
+              <h3>Datamontag</h3>
+              <h5> <b>  Yazılım Çözümleri</b></h5>
+              <a href="{%  url 'yazılım'  %}" class="main-stroked-button">Bilgi Al</a>
+              
+            </div>
+        </div>
+      </div>
+      <!-- // Item -->
+
+ <!-- // Item -->
+ <div class="item">
+  <div class="img-fill">
+      <img src="{% static 'assets/images/denek2.jpg' %}" width="10px" alt="Resim Bulunamadı" style="opacity: 0.5;">
+      <div class="text-content">
+        <h3>Datamontag</h3>
+        <h5> <b>Web Tasarım</b> </h5>
+        
+        <a href="{%  url 'web'  %}" class="main-stroked-button">Bilgi Al</a>
+        
+      </div>
+  </div>
+</div>
+<!-- // Item -->
+
+
+
+
+
+      <!-- Item -->
+      <div class="item">
+        <div class="img-fill">
+            <img src="{% static 'assets/images/ana33.jpg' %}" alt="Resim Bulunamadı">
+            <div class="text-content">
+              <h3>Datamontag</h3>
+              <h5> <b>SEO Çözümleri</b> </h5>
+              
+              <a href="{%  url 'seo'  %}" class="main-stroked-button">Bilgi Al</a>
+              
+            </div>
+        </div>
+      </div>
+     
+
+
+      <!-- Item -->
+      <div class="item">
+        <div class="img-fill">
+            <img src="{% static 'assets/images/denek4.jpg' %}" alt="Resim Bulunamadı" style="opacity: 0.5;">
+            <div class="text-content">
+              <h3>Datamontag</h3>
+              <h5> <b>Sosyal Medya Yönetimi</b> </h5>
+              <a href="{%  url 'sosyal'  %}" class="main-stroked-button">Bilgi Al</a>
+              
+            </div>
+        </div>
+      </div>
+      <!-- // Item -->
+    </div>
+</div>
+<div class="scroll-down scroll-to-section"><a href="#about"><i class="fa fa-arrow-down"></i></a></div>
+<!-- ***** Main Banner Area End ***** -->
+
+<style>
+
+.img-fill img {
+   
+    position: relative;
+    display: inline-block;
+    max-width: none;
+    height: 1200px;
+    width: 2000px;
+    margin-top: -100px;
+}
+</style>
+
+
+
+
+
+
+
+
+
+<!-- ***** About Area Starts ***** -->
+<section class="section" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="left-text-content">
+                    <div class="section-heading">
+                        <h6>Hakkımızda</h6>
+                        <br>
+                        <h1>Gelişmiş Yazılım Çözümleri</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="service-item">
+                                <img src="{% static 'assets/images/webtaso.png' %}" alt="Resim Bulunamadı">
+                              
+                                <h4>Web Tasarım</h4>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="service-item">
+                                <img src="{% static 'assets/images/seoo.png' %}" alt="Resim Bulunamadı">
+                                <h4> SEO Hizmeti</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="service-item">
+                                <img src="{% static 'assets/images/sosyalmedya.png' %}" alt="Resim Bulunamadı">
+                                <h4>Sosyal Medya Yönetimi</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="service-item">
+                                <img src="{% static 'assets/images/logotasarım.png' %}" alt="">
+                                <h4>Logo Tasarımı</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <a href="{%  url 'about'  %}" class="main-button-icon">
+                                 Daha Fazlası <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="right-text-content">
+                    <p> Datamontag Web Hizmetleri: 
+                      <br> <br>
+                      Tamamen kodla oluşturulmuş alt yapı, güncel tasarımlar, template güncelleme, admin paneli entegrasyonu ve özelleştirmesidir. 
+                      Buna ek olarak SEO Hizmeti vermekte ve Web Sızma Testlerinden geçen başarılı ve korunaklı, SSL Sertifikalı web siteleri oluşturmaktayız.
+                      <br><br>
+                      Bununla beraber CRM Sistemleri, Whatsapp, Telegram ve Slack üzerinden Chatbot hizmeti sağlamaktayız. 
+                      Yapay zeka tarafında, gelişmiş 
+                      IoT yazılımlarımız, veri madenciliği (data mining)  ve optimizasyonu hizmeti sunuyoruz.
+                       Bununla birlikte  İş güvenliği yazılımları, akıllı kart yazılımları, RFID , hizmetimiz de mevcut.
+                      <br>
+                      <br>
+                      
+                      
+                      
+                    
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** About Area Ends ***** -->
+<link rel=”canonical” href=”http://datamontag.com” />
+
+
+
+
+
+
+ <!-- ***** Projects Area Starts ***** -->
+ <section class="section" id="projects" style="background-color:#d8cbc434;">
+  <div class="container">
+    <div class="row">
+      <style>
+        p{text-align: center;}
+    </style>
+
+        <div class="col-lg-3">
+            <div class="section-heading">
+              
+                <h6>
+                 <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WEB TASARIM </b></h6>
+                <hr>
+          <p>Markalaşmada rol oynayan modern ve responsive tasarımlar. </p>
+                       
+
+            </div>
+           
+        </div>
+
+        <div class="col-lg-3">
+          <div class="section-heading">
+              <h6><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SOSYAL MEDYA YÖNETİMİ</b></h6>
+            <hr>
+             <p>Markalaşmada rol oynayan modern ve responsive tasarımlar. Markalaşmada rol oynayan modern ve responsive tasarımlar.</p>
+          </div>
+          
+        
+
+      </div>
+
+      <div class="col-lg-3">
+        <div class="section-heading">
+            <h6> <b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEO ÇÖZÜMLERİ</b></h6>
+           <hr>
+        <p>Markalaşmada rol oynayan modern ve responsive tasarımlar. Markalaşmada rol oynayan modern ve responsive tasarımlar.</p>  
+        </div>
+        
+       
+    </div>
+
+    <div class="col-lg-3">
+      <div class="section-heading">
+          <h6><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YAZILIM ÇÖZÜMLERİ</b></h6>
+        <hr>
+              <p>Markalaşmada rol oynayan modern ve responsive tasarımlar. Markalaşmada rol oynayan modern ve responsive tasarımlar.</p>
+      </div> 
+     
+  </div>
+
+
+        
+            
+        </div>
+        <!-- ***** kolon sonu ***** -->
+
+
+
+
+
+
+
+    </div>
+  </div>
+</section>
+<!-- ***** Projects Area Ends ***** -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ***** Features Big Item Start ***** -->
+<section class="section" id="subscribe">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+              <div class="section-heading">
+                 <!--  <h6>Bizimle İletişime Geçin</h6>-->
+                  <h2>Bizi Takipte Kalın</h2>
+              </div>
+              <div class="subscribe-content">
+                  <p>Datamontag ekibi olarak kendimizi geliştirmek için sürekli çalışıyoruz. Sunacağımız yeni içerik ve hizmetlerden haberdar olmak için bizi takipte kalın.</p>
+                  <div class="subscribe-form">
+                      <form id="subscribe-now" action="" method="get">
+                          <div class="row">
+                              <div class="col-md-8 col-sm-12">
+                                <fieldset>
+                                  <input name="email" type="text" id="email" placeholder="Mail adresinizi girin" required="">
+                                </fieldset>
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                <fieldset>
+                                  <button type="submit" id="form-submit" class="main-button">Abone Ol</button>
+                                </fieldset>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- ***** Features Big Item End ***** -->
+
+
+
+
+
+ <!-- ***** Referanslar Kısmı ***** -->
+ <section class="section" id="projectss">
+  <div class="container">
+    <div class="row">
+      <style>
+        #projectss .container{
+          margin-top: -30px;
+        }
+      </style>
+    
+        <div class="col-lg-3">
+            <div class="section-heading">
+              <img src="{% static 'assets/images/hildaa.png' %}" alt="Resim Bulunamadı" height="350px" width="350px"><br>
+
+            </div>
+            
+        </div>
+        <div class="col-lg-3">
+          <div class="section-heading">
+            <img src="{% static 'assets/images/lemanlogo.png' %}" alt="Resim Bulunamadı" height="350px" width="350px">
+          </div>
+          
+      
+      </div>
+
+      <div class="col-lg-3">
+        <div class="section-heading">
+          <img src="{% static 'assets/images/suat.png' %}" alt="Resim Bulunamadı" height="350px" width="350px">
+        </div>
+        
+       
+    </div>
+
+    <div class="col-lg-3">
+      <div class="section-heading">
+              <img src="{% static 'assets/images/hildaa.png' %}" alt="Resim Bulunamadı" height="350px" width="350px"><br>
+              </div> 
+     
+  </div>
+
+
+        
+            
+        </div>
+        <!-- ***** kolon sonu ***** -->
+
+
+
+
+
+
+
+    </div>
+  </div>
+</section>
+<!-- ***** Projects Area Ends ***** -->
+
+
+
+
+
+
+
+ <!-- ***** Contact Us Area Starts ***** -->
+ <section class="section" id="contact-us">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-12">
+              <div class="left-text-content">
+                  <div class="section-heading">
+                      <h6> İletişim</h6>
+                      <h2>Bizimle İletişime Geçin!</h2>
+                  </div>
+                  <ul class="contact-info">
+                      
+                      <li><img src="{% static 'assets/images/mail.png' %}" width="30px" height="30px" alt="Resim Bulunamadı">info@datamontag.com</li>
+                      <li><img src="{% static 'assets/images/world.png' %}" width="32px" height="32px"  alt="Resim Bulunamadı">www.datamontag.com</li>
+                  </ul>
+              </div>
+          </div>
+
+          <!--MAIL GONDERILECEK FORM-->
+          <div class="col-lg-8 col-md-8 col-xs-12">
+              <div class="contact-form">
+                  <form id="contact" action="" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                      <div class="col-md-6 col-sm-12">
+                        <fieldset>
+                          {{form.username}}
+                        </fieldset>
+                      </div>
+                      <div class="col-md-6 col-sm-12">
+                        <fieldset>
+                          {{form.phone}}
+                        </fieldset>
+                      </div>
+                      <div class="col-md-6 col-sm-12">
+                        <fieldset>
+                          {{form.email}}
+                        </fieldset>
+                      </div>
+                      <div class="col-md-6 col-sm-12">
+                        <fieldset>
+                          {{form.subject}}
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-12">
+                        <fieldset>
+                          {{form.message}}
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-12">
+                        <fieldset>
+                        
+                        </fieldset>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- ***** Contact Us Area Ends ***** -->
+
+
+
+{% endblock  %}

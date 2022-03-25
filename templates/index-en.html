@@ -1,0 +1,316 @@
+{% extends 'base-en.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+ <!-- ***** Search Area ***** -->
+ <div id="search">
+    <button type="button" class="close">×</button>
+    <form id="contact" action="#" method="get">
+        <fieldset>
+            <input type="search" name="q" placeholder="SEARCH KEYWORD(s)" aria-label="Search through site content">
+        </fieldset>
+        <fieldset>
+            <button type="submit" class="main-button">Search</button>
+        </fieldset>
+    </form>
+</div>
+
+<!-- ***** Main Banner Area Start ***** -->
+<div class="main-banner header-text" id="top">
+    <div class="Modern-Slider">
+      <!-- Item -->
+      <div class="item">
+        <div class="img-fill">
+            <img src="{% static 'assets/images/ana2.jpg' %}" alt="">
+            <div class="text-content">
+              <h3>Datamontag</h3>
+              <h5> <b> Innovative Software Solutions</b></h5>
+              <a href="#projects" class="main-stroked-button">Services</a>
+              <a href="#contact-us" class="main-filled-button"> Contact us</a>
+            </div>
+        </div>
+      </div>
+      <!-- // Item -->
+      <!-- Item -->
+      <div class="item">
+        <div class="img-fill">
+            <img src="{% static 'assets/images/ana33.jpg' %}" alt="">
+            <div class="text-content">
+              <h3>Datamontag</h3>
+              <h5> <b>SEO Solutions</b> </h5>
+              <a href="#projects" class="main-stroked-button">Services</a>
+              <a href="#contact-us" class="main-filled-button">Contact</a>
+            </div>
+        </div>
+      </div>
+      <!-- // Item -->
+      <!-- Item -->
+      <div class="item">
+        <div class="img-fill">
+            <img src="{% static 'assets/images/ana4.jpg' %}" alt="">
+            <div class="text-content">
+              <h3>Datamontag</h3>
+              <h5> <b>IoT and Smart Card Systems</b> </h5>
+              <a href="#" class="main-stroked-button">Services</a>
+              <a href="#" class="main-filled-button">Contact</a>
+            </div>
+        </div>
+      </div>
+      <!-- // Item -->
+    </div>
+</div>
+<div class="scroll-down scroll-to-section"><a href="#about"><i class="fa fa-arrow-down"></i></a></div>
+<!-- ***** Main Banner Area End ***** -->
+
+<style>
+
+.img-fill img {
+   
+    position: relative;
+    display: inline-block;
+    max-width: none;
+    height: 1200px;
+    width: 2000px;
+    margin-top: -100px;
+}
+</style>
+
+
+
+
+
+
+
+
+
+<!-- ***** About Area Starts ***** -->
+<section class="section" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="left-text-content">
+                    <div class="section-heading">
+                        <h6>About us</h6>
+                        <h2>We are providing Innovative Software Solutions</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="service-item">
+                                <img src="{% static 'assets/images/service-item-01.png' %}" alt="">
+                                <h4>Web Design</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="service-item">
+                                <img src="{% static 'assets/images/service-item-01.png' %}" alt="">
+                                <h4> SEO Service</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="service-item">
+                                <img src="{% static 'assets/images/contact-info-03.png' %}" alt="">
+                                <h4>Social Media Management</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="service-item">
+                                <img src="{% static 'assets/images/contact-info-03.png' %}" alt="">
+                                <h4>Logo Design</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <a href="#" class="main-button-icon">
+                                 More <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="right-text-content">
+                    <p> Datamontag Web Services: 
+                      <br> <br>
+                      Django-based infrastructure with modern designs, template updates, admin panel integration and customization. Additionally, we are providing SEO Services and a safe website with SSL certificate.
+                      <br><br>
+                      We are providing CRM Systems, Chatbot services through WhatsApp, Telegram, Slack. We have advanced AI Services such as IoT softwares, data mining and optimization. We also provide Smart Card, RFID services.
+                      <br>
+                      <br>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** About Area Ends ***** -->
+
+
+
+
+
+<!-- ***** Features Big Item Start ***** -->
+<section class="section" id="subscribe">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="section-heading">
+                   <!--  <h6>Bizimle İletişime Geçin</h6>-->
+                    <h2>Stay Updated</h2>
+                </div>
+                <div class="subscribe-content">
+                    <p> As Datamontag, we keep working to improve ourselves. To be informed about the new contents and services that we will provide, stay in contact with us.</p>
+                    <div class="subscribe-form">
+                        <form id="subscribe-now" action="" method="get">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-12">
+                                  <fieldset>
+                                    <input name="email" type="text" id="email" placeholder="Your mail adress" required="">
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                  <fieldset>
+                                    <button type="submit" id="form-submit" class="main-button">Subscribe</button>
+                                  </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Features Big Item End ***** -->
+
+
+ <!-- ***** Projects Area Starts ***** -->
+ <section class="section" id="projects">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="section-heading">
+                <h6>Datamontag</h6>
+                <h2>Work Fields</h2>
+            </div>
+            <div class="filters">
+                <ul>
+                    <li class="active" data-filter="*">All</li>
+                    <li data-filter=".des">Artificial Intelligence</li>
+                    <li data-filter=".dev">Web Development</li>
+                    <li data-filter=".gra">Social Media Management</li>
+                    <li data-filter=".tsh">SEO Services</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <div class="filters-content">
+                <div class="row grid">   
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all des">
+                      <div class="item">
+                        <a href="{% static 'assets/images/proje2.jpg' %}" data-lightbox="image-1" data-title="Our Projects"><img src="{% static 'assets/images/proje2.jpg' %}" alt=""></a>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all dev">
+                      <div class="item">
+                        <a href="{% static 'assets/images/web1.jpg' %}" data-lightbox="image-1" data-title="Our Projects"><img src="{% static 'assets/images/web1.jpg' %}" alt=""></a>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all gra">
+                      <div class="item">
+                        <a href="{% static 'assets/images/rfid.jpg' %}" data-lightbox="image-1" data-title="Our Projects"><img src="{% static 'assets/images/rfid.jpg' %}" alt=""></a>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all tsh">
+                      <div class="item">
+                        <a href="{% static 'assets/images/seo.jpg' %}" data-lightbox="image-1" data-title="Our Projects"><img src="{% static 'assets/images/seo.jpg' %}" alt=""></a>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all dev">
+                      <div class="item">
+                        <a href="{% static 'assets/images/web2.jpg' %}" data-lightbox="image-1" data-title="Our Projects"><img src="{% static 'assets/images/web2.jpg' %}" alt=""></a>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all des">
+                      <div class="item">
+                        <a href="{% static 'assets/images/chatbot.jpg' %}" data-lightbox="image-1" data-title="Our Projects"><img src="{% static 'assets/images/chatbot.jpg' %}" alt=""></a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+<!-- ***** Projects Area Ends ***** -->
+
+
+
+ <!-- ***** Contact Us Area Starts ***** -->
+ <section class="section" id="contact-us">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-12">
+              <div class="left-text-content">
+                  <div class="section-heading">
+                      <h6> Contact</h6>
+                      <h2> Get in contact with us!</h2>
+                  </div>
+                  <ul class="contact-info">
+                      
+                      <li><img src="{% static 'assets/images/contact-info-02.png' %}" alt="">info@datamontag.com</li>
+                      <li><img src="{% static 'assets/images/contact-info-03.png' %}" alt="">www.datamontag.com</li>
+                  </ul>
+              </div>
+          </div>
+
+          <!--MAIL GONDERILECEK FORM-->
+          <div class="col-lg-8 col-md-8 col-xs-12">
+              <div class="contact-form">
+                  <form id="contact" action="" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                      <div class="col-md-6 col-sm-12">
+                        <fieldset>
+                          {{form.username}}
+                        </fieldset>
+                      </div>
+                      <div class="col-md-6 col-sm-12">
+                        <fieldset>
+                          {{form.phone}}
+                        </fieldset>
+                      </div>
+                      <div class="col-md-6 col-sm-12">
+                        <fieldset>
+                          {{form.email}}
+                        </fieldset>
+                      </div>
+                      <div class="col-md-6 col-sm-12">
+                        <fieldset>
+                          {{form.subject}}
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-12">
+                        <fieldset>
+                          {{form.message}}
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-12">
+                        <fieldset>
+                        
+                        </fieldset>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- ***** Contact Us Area Ends ***** -->
+
+
+
+{% endblock  %}

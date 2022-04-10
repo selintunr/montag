@@ -26,6 +26,10 @@ def index(request):
         context['form'] = contactForm()
         return render(request, "index.html", context)
 
+
+
+        
+
     if request.method == "POST":
         form = subForm(request.POST)
         if form.is_valid():

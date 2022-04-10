@@ -69,6 +69,7 @@ ul, li {
   padding: 0;
   margin: 0;
   list-style: none;
+  font-family: inherit;
 }
 
 header, nav, section, article, aside, footer, hgroup {
@@ -824,9 +825,12 @@ banner
 }
 
 /* ==== Slider Style === */
+
+
 .Modern-Slider .item .img-fill{
   height:99vh;
   background:#000;
+
 }
 
 .Modern-Slider .item .info > div{
@@ -970,7 +974,7 @@ about
   position: relative;
   z-index: 9;
   background-color: #191410;
-  background-image: url(../images/arkaa.jpg);
+
   
   background-size: cover;
 }
@@ -1664,7 +1668,7 @@ portfolio
 }
 
 #projects {
-  padding-top: 120px;
+  padding-top: 50px;
 }
 
 #projects .section-heading {

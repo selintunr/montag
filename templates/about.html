@@ -1,13 +1,15 @@
 {% extends 'index.html' %}
 
 {% load static %}
-
+{% load i18n %}
 
 {% block content %}
 
 
 
 <!-- ***** About Area Starts ***** -->
+{% for ab in about %}
+
 <section class="section" id="about">
     <div class="container">
         <div class="row">
@@ -17,10 +19,8 @@
                         <br>
                     </div>
                     <div class="row">
-                       <img src="{% static 'assets/images/translogo.png' %}" alt="" height="450px" width="450px">
-                            
-                       
-                        
+                       <!--- <img src="{% static 'assets/images/translogo.png' %}" alt="" height="400px" width="380px"> -->
+                       <img  src="{{ ab.title1_Image.url }}" height="400px" width="380px" >
                     </div>
                 </div>
             </div>
@@ -40,25 +40,15 @@
                         }
 
                     </style>
-                    <p> Datamontag Business Development Solutions 
+                    <p> {{ab.title2}}
+                        
                       <br> <br> 
                          
-                      Datamontag dijital iş geliştirme çözümleriyle işinizi ön plana çıkarmak ve geliştirmek için ihtiyacınız olan hizmetleri bir
-                       arada toplayan bir topluluktur. Amacımız, işletmeniz için ihtiyacınız olan vitrini yaratarak içeri daha fazla müşteri girmesini 
-                       sağlamak. Nasıl göründüğünüzü, ne anlatmak istediğinizi, kim olduğunu önemsiyor, sizin için size özel çözümler üretiyoruz. 
-                       <br>
-                       <br>
-                      Profesyonel web çözümleri, interaktif web tasarım, sosyal medya yönetimi, SEO destekli içerik üretimi gibi ihtiyacınız olan tüm 
-                      hizmetler Datamontag ekibi tarafından, size özel olarak verilir. Sorunları hızlı bir şekilde çözmek için size mümkün olan en kısa
-                       sürede yanıt vermeyi amaçlayarak bu ekibin en önemli parçasına odaklanıyoruz: size.
-                      <br><br>
-                       Datamontag Web Hizmetleri sizin için tamamen kodla oluşturulmuş alt yapı, güncel tasarımlar, template güncelleme, admin paneli 
-                      entegrasyonu ve özelleştirmeleri içeren, Web Sızma Testlerinden geçen başarılı ve korunaklı, SSL Sertifikalı web siteleri tasarlar. 
-                      CRM Sistemleri, Whatsapp, Telegram ve Slack üzerinden Chatbot hizmetleri de verir. Yapay zeka tarafında, gelişmiş IoT yazılımları, 
-                      veri madenciliği (data mining) ve optimizasyonu hizmeti sunar. Bununla birlikte iş güvenliği yazılımları, akıllı kart yazılımları, 
-                      RFID hizmetleri de mevcuttur.
+                      {{ab.content}}
                       <br>
                       <br>
+                      {{ab.content2}}
+
                       
                       
 
@@ -86,6 +76,7 @@
 <!-- ***** About Area Ends ***** -->
 
 
+{% endfor %}
 
 
 

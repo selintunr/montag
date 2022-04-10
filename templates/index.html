@@ -3,34 +3,12 @@
 {% load static %}
 
 
+
+
 {% block content %}
 
 
-<link rel=”canonical” href=”http://example.com/index.hml” />
-
-
-
- <!-- ***** Search Area ***** -->
- <div id="search">
-    <button type="button" class="close">×</button>
-    <form id="contact" action="#" method="get">
-        <fieldset>
-            <input type="search" name="q" placeholder="SEARCH KEYWORD(s)" aria-label="Search through site content">
-        </fieldset>
-        <fieldset>
-            <button type="submit" class="main-button">Search</button>
-        </fieldset>
-    </form>
-</div>
-
-
-<!-- ***** particles kullandığım bölüm ***** -->
-
-
-<div id="particles-js"></div>
-
-<script src="particles.js"></script>
-
+<link rel=”canonical” href=”http://datamontag.com/index.html” />
 
 
 
@@ -38,33 +16,51 @@
 <!-- ***** Main Banner Area Start ***** -->
 <div class="main-banner header-text" id="top">
     <div class="Modern-Slider">
+      
       <!-- Item -->
       <div class="item">
         
         <div class="img-fill">
-            <img src="{% static 'assets/images/ana2.jpg' %}" alt="Resim Bulunamadı" style="opacity: 0.5;">
-           
+        <!--  <img src="{% static 'assets/images/ana2.jpg' %}" alt="Resim Bulunamadı" style="opacity: 0.5;width: 90%;">  -->
+             
+            <img class="responsive-img" 
+            srcset="{% static 'assets/images/ana1.jpg' %} 180w, 
+                    {% static 'assets/images/anahazal.png' %} 1200w,
+                    {% static 'assets/images/ana2.jpg' %} 1280w"  
+            sizes="100vw"
+            style="opacity: 0.5"
+            src="{% static 'assets/images/close.png' %}"
+            alt="Desciptive Alt text">
+          
 
-            
             <div class="text-content">
               <h3>Datamontag</h3>
               <h5> <b>  Yazılım Çözümleri</b></h5>
-              <a href="{%  url 'yazılım'  %}" class="main-stroked-button">Bilgi Al</a>
+              <a href="#contact-us" class="main-stroked-button">Bilgi Al</a>
               
             </div>
         </div>
       </div>
       <!-- // Item -->
 
+
  <!-- // Item -->
  <div class="item">
   <div class="img-fill">
-      <img src="{% static 'assets/images/denek2.jpg' %}" width="10px" alt="Resim Bulunamadı" style="opacity: 0.5;">
+    <img class="responsive-img" 
+    srcset="{% static 'assets/images/denek2.jpg' %} 1280w, 
+            {% static 'assets/images/denek2mobi.png' %} 1200w" 
+    sizes="100vw"
+    style="opacity: 0.5"
+    src="{% static 'assets/images/ana2.jpg' %}"
+    alt="Desciptive Alt text">
+
+
       <div class="text-content">
         <h3>Datamontag</h3>
         <h5> <b>Web Tasarım</b> </h5>
         
-        <a href="{%  url 'web'  %}" class="main-stroked-button">Bilgi Al</a>
+        <a href="#contact-us" class="main-stroked-button">Bilgi Al</a>
         
       </div>
   </div>
@@ -72,33 +68,44 @@
 <!-- // Item -->
 
 
-
-
-
       <!-- Item -->
       <div class="item">
         <div class="img-fill">
-            <img src="{% static 'assets/images/ana33.jpg' %}" alt="Resim Bulunamadı">
+            <img class="responsive-img" 
+            srcset="{% static 'assets/images/ana33.jpg' %} 1280w, 
+                    {% static 'assets/images/ana33mobi.png' %} 1200w" 
+            sizes="100vw"
+            style="opacity: 0.5"
+            src="{% static 'assets/images/ana33.jpg' %}"
+            alt="Desciptive Alt text">
+
             <div class="text-content">
               <h3>Datamontag</h3>
               <h5> <b>SEO Çözümleri</b> </h5>
               
-              <a href="{%  url 'seo'  %}" class="main-stroked-button">Bilgi Al</a>
+              <a href="#contact-us" class="main-stroked-button">Bilgi Al</a>
               
             </div>
         </div>
       </div>
      
 
-
       <!-- Item -->
       <div class="item">
         <div class="img-fill">
-            <img src="{% static 'assets/images/denek4.jpg' %}" alt="Resim Bulunamadı" style="opacity: 0.5;">
+            <img class="responsive-img" 
+            srcset="{% static 'assets/images/sosi.jpg' %} 1280w, 
+                    {% static 'assets/images/sosimobi.png' %} 1200w" 
+            sizes="100vw"
+            style="opacity: 0.5"
+            src="{% static 'assets/images/ana33.jpg' %}"
+            alt="Desciptive Alt text">
+
+
             <div class="text-content">
               <h3>Datamontag</h3>
               <h5> <b>Sosyal Medya Yönetimi</b> </h5>
-              <a href="{%  url 'sosyal'  %}" class="main-stroked-button">Bilgi Al</a>
+              <a href="#contact-us" class="main-stroked-button">Bilgi Al</a>
               
             </div>
         </div>
@@ -108,21 +115,6 @@
 </div>
 <div class="scroll-down scroll-to-section"><a href="#about"><i class="fa fa-arrow-down"></i></a></div>
 <!-- ***** Main Banner Area End ***** -->
-
-<style>
-
-.img-fill img {
-   
-    position: relative;
-    display: inline-block;
-    max-width: none;
-    height: 1200px;
-    width: 2000px;
-    margin-top: -100px;
-}
-</style>
-
-
 
 
 
@@ -139,9 +131,9 @@
                     <div class="section-heading">
                         <h6>Hakkımızda</h6>
                         <br>
-                        <h1>Gelişmiş Yazılım Çözümleri</h1>
+                        <h1 style="color: rgb(255, 255, 255);">Gelişmiş Yazılım Çözümleri</h1>
                     </div>
-                    <div class="row">
+                    <div class="row" style="color: rgb(255, 255, 255);">
                         <div class="col-md-6 col-sm-6">
                             <div class="service-item">
                                 <img src="{% static 'assets/images/webtaso.png' %}" alt="Resim Bulunamadı">
@@ -205,34 +197,34 @@
 
 
 
-
-
  <!-- ***** Projects Area Starts ***** -->
- <section class="section" id="projects" style="background-color:#d8cbc434;">
+ <section class="section" id="projects" style="background-color:#d8cbc434;" >
   <div class="container">
-    <div class="row">
+    <div class="row"> 
       <style>
-        p{text-align: center;}
+        p,h6{text-align: center;}
+        
     </style>
 
         <div class="col-lg-3">
             <div class="section-heading">
               
                 <h6>
-                 <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WEB TASARIM </b></h6>
+                 <b>WEB TASARIM </b></h6>
                 <hr>
-          <p>Markalaşmada rol oynayan modern ve responsive tasarımlar. </p>
+          <p>Markalaşmada rol oynayan modern ve responsive tasarımlar. Özelleştirilmiş admin paneli. </p><hr>
                        
 
             </div>
            
         </div>
+        
 
         <div class="col-lg-3">
           <div class="section-heading">
-              <h6><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SOSYAL MEDYA YÖNETİMİ</b></h6>
+              <h6><b style="text-align: center;">SOSYAL MEDYA YÖNETİMİ</b></h6>
             <hr>
-             <p>Markalaşmada rol oynayan modern ve responsive tasarımlar. Markalaşmada rol oynayan modern ve responsive tasarımlar.</p>
+             <p>İşletmeniz için ihtiyacınız olan vitrini yaratacak sosyal medya içerikleri ve yönetimi.</p><hr>
           </div>
           
         
@@ -241,9 +233,9 @@
 
       <div class="col-lg-3">
         <div class="section-heading">
-            <h6> <b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEO ÇÖZÜMLERİ</b></h6>
+            <h6> <b>SEO ÇÖZÜMLERİ</b></h6>
            <hr>
-        <p>Markalaşmada rol oynayan modern ve responsive tasarımlar. Markalaşmada rol oynayan modern ve responsive tasarımlar.</p>  
+        <p>Sayfanıza olan organik trafik akışını arttırarak işinizi büyütmenizde yardımcı olacak SEO çözümleri.</p><hr>  
         </div>
         
        
@@ -251,9 +243,10 @@
 
     <div class="col-lg-3">
       <div class="section-heading">
-          <h6><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YAZILIM ÇÖZÜMLERİ</b></h6>
+          <h6><b>YAZILIM ÇÖZÜMLERİ</b></h6>
         <hr>
-              <p>Markalaşmada rol oynayan modern ve responsive tasarımlar. Markalaşmada rol oynayan modern ve responsive tasarımlar.</p>
+              <p>CRM sistemleri, gelişmiş IoT ve iş güvenliği yazılımları,
+                  akıllı kart yazılımları, RFID.</p><hr>
       </div> 
      
   </div>
@@ -292,16 +285,8 @@
 
 
 
-
-
-
-
-
-
-
-
-<!-- ***** Features Big Item Start ***** -->
-<section class="section" id="subscribe">
+<!-- ***** Features ***** -->
+<section class="section" id="subscribe" style="margin-bottom: 50px;">
   <div class="container">
       <div class="row">
           <div class="col-lg-8 offset-lg-2">
@@ -312,12 +297,11 @@
               <div class="subscribe-content">
                   <p>Datamontag ekibi olarak kendimizi geliştirmek için sürekli çalışıyoruz. Sunacağımız yeni içerik ve hizmetlerden haberdar olmak için bizi takipte kalın.</p>
                   <div class="subscribe-form">
-                      <form id="subscribe-now" action="" method="get">
+                      <form id="subscribe-now" action="" method="POST">
+                          {% csrf_token %}
                           <div class="row">
                               <div class="col-md-8 col-sm-12">
-                                <fieldset>
-                                  <input name="email" type="text" id="email" placeholder="Mail adresinizi girin" required="">
-                                </fieldset>
+                                {{ subForm.email }}
                               </div>
                               <div class="col-md-4 col-sm-12">
                                 <fieldset>
@@ -332,68 +316,75 @@
       </div>
   </div>
 </section>
-<!-- ***** Features Big Item End ***** -->
+<!-- ***** Features end ***** -->
 
 
 
 
 
- <!-- ***** Referanslar Kısmı ***** -->
- <section class="section" id="projectss">
-  <div class="container">
-    <div class="row">
-      <style>
-        #projectss .container{
-          margin-top: -30px;
-        }
-      </style>
+<!-- ***** REFERANSLAR  ***** -->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+<div class="container" id="ref" >
+
+
+
+  
+    <section  class="customer-logos slider1">
+    {% for ab in refer %}
     
-        <div class="col-lg-3">
-            <div class="section-heading">
-              <img src="{% static 'assets/images/hildaa.png' %}" alt="Resim Bulunamadı" height="350px" width="350px"><br>
-
-            </div>
-            
-        </div>
-        <div class="col-lg-3">
-          <div class="section-heading">
-            <img src="{% static 'assets/images/lemanlogo.png' %}" alt="Resim Bulunamadı" height="350px" width="350px">
-          </div>
-          
-      
-      </div>
-
-      <div class="col-lg-3">
-        <div class="section-heading">
-          <img src="{% static 'assets/images/suat.png' %}" alt="Resim Bulunamadı" height="350px" width="350px">
-        </div>
-        
        
-    </div>
+        <div style="margin: 0px 20px;" class="slide1">
 
-    <div class="col-lg-3">
-      <div class="section-heading">
-              <img src="{% static 'assets/images/hildaa.png' %}" alt="Resim Bulunamadı" height="350px" width="350px"><br>
-              </div> 
-     
-  </div>
+            <a href="{{ ab.title2_adres.url }}"></a>
+            <img src="{{ ab.title1_Image.url }}">
+        </div></a>
+    {% endfor %}
 
-
-        
-            
-        </div>
-        <!-- ***** kolon sonu ***** -->
+<!-- src="{{ ab.title2_adres.url }}"-->
 
 
 
+    </section>
+
+   
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+</script>
 
 
 
 
-    </div>
-  </div>
-</section>
-<!-- ***** Projects Area Ends ***** -->
+<!-- ***** REFERANSLAR KISMI  BİTİŞ ***** -->
 
 
 
@@ -401,68 +392,59 @@
 
 
 
- <!-- ***** Contact Us Area Starts ***** -->
- <section class="section" id="contact-us">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-4 col-md-4 col-xs-12">
-              <div class="left-text-content">
-                  <div class="section-heading">
-                      <h6> İletişim</h6>
-                      <h2>Bizimle İletişime Geçin!</h2>
-                  </div>
-                  <ul class="contact-info">
-                      
-                      <li><img src="{% static 'assets/images/mail.png' %}" width="30px" height="30px" alt="Resim Bulunamadı">info@datamontag.com</li>
-                      <li><img src="{% static 'assets/images/world.png' %}" width="32px" height="32px"  alt="Resim Bulunamadı">www.datamontag.com</li>
-                  </ul>
-              </div>
-          </div>
-
-          <!--MAIL GONDERILECEK FORM-->
-          <div class="col-lg-8 col-md-8 col-xs-12">
-              <div class="contact-form">
-                  <form id="contact" action="" method="POST">
-                    {% csrf_token %}
-                    <div class="row">
-                      <div class="col-md-6 col-sm-12">
-                        <fieldset>
-                          {{form.username}}
-                        </fieldset>
-                      </div>
-                      <div class="col-md-6 col-sm-12">
-                        <fieldset>
-                          {{form.phone}}
-                        </fieldset>
-                      </div>
-                      <div class="col-md-6 col-sm-12">
-                        <fieldset>
-                          {{form.email}}
-                        </fieldset>
-                      </div>
-                      <div class="col-md-6 col-sm-12">
-                        <fieldset>
-                          {{form.subject}}
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-12">
-                        <fieldset>
-                          {{form.message}}
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-12">
-                        <fieldset>
-                        
-                        </fieldset>
-                      </div>
+<!-- ***** Contact Us Area Starts ***** -->
+<section class="section" id="contact-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="left-text-content">
+                    <div class="section-heading">
+                        <h7>İletişim</h7>
+                        <h2>Bizimle İletişime Geçin!</h2>
                     </div>
-                  </form>
-              </div>
-          </div>
-      </div>
-  </div>
+                    <ul class="contact-info">
+                        <li><img src="{% static 'assets/images/mail.png' %}" width="30px" height="30px alt=">info@datamontag.com</li>
+                        <li><img src="{% static 'assets/images/world.png' %}" width="30px" height="30px alt=">www.datamontag.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-xs-12">
+                <div class="contact-form">
+                    <form id="contact" action="" method="POST">
+                        {% csrf_token %}
+                       
+                      <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            {{ form.username }}
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            {{ form.phone }}
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            {{ form.email }}
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            {{ form.subject }}
+                        </div>
+                        <div class="col-lg-12">
+                            {{ form.message }}
+                        </div>
+                        <div class="col-lg-12">
+                          <fieldset>
+                            <button type="submit" id="form-submit" class="main-button-icon"> Gönder <i class="fa fa-arrow-right"></i></button>
+                          </fieldset>
+                        </div>
+                      </div>
+                    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- ***** Contact Us Area Ends ***** -->
+
+
 
 
 

@@ -15,3 +15,13 @@ class contactFormModel(models.Model):
     
     def __str__(self):
         return self.username
+
+
+class staticAboutModel(models.Model):
+    title1 = models.CharField(max_length=100, verbose_name='Sol Başlık')
+    title1 = models.CharField(max_length=100, verbose_name='Sağ Başlık')
+    content = models.CharField(max_length=1300, verbose_name='İçerik')
+    
+    
+    def __str__(self):
+        return self.title1

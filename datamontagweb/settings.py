@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'root',
+    'webPage1',
+    'crispy_forms',
+    'imagekit',
+    'responsive',
+
 ]
 
 MIDDLEWARE = [
@@ -48,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'datamontagweb.urls'
@@ -65,6 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                
             ],
         },
     },
@@ -79,7 +85,8 @@ WSGI_APPLICATION = 'datamontagweb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -130,3 +137,51 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+""" 
+
+RESPONSIVE_MEDIA_QUERIES = {
+    'small': {
+        'verbose_name': _('Small screens'),
+        'min_width': None,
+        'max_width': 640,
+    },
+    'medium': {
+        'verbose_name': _('Medium screens'),
+        'min_width': 641,
+        'max_width': 1024,
+    },
+    'large': {
+        'verbose_name': _('Large screens'),
+        'min_width': 1025,
+        'max_width': 1440,
+    },
+    'xlarge': {
+        'verbose_name': _('XLarge screens'),
+        'min_width': 1441,
+        'max_width': 1920,
+    },
+    'xxlarge': {
+        'verbose_name': _('XXLarge screens'),
+        'min_width': 1921,
+        'max_width': None,
+    }
+}
+
+
+
+"""

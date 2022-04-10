@@ -6,15 +6,17 @@
   <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
+
     <meta name="description" content="İşinizi Hemen Büyütün! 7/24 Canlı Destek, En Güvenli E-Ticaret Yazılımı Altyapısı, Gelişmiş Web Tasarım, Sosyal Medya Yönetimi ve SEO Hizmetiyle Hemen Tanışın!">
     <meta name="author" content="">
     <meta name=”robots” content="index, follow">
     <meta name="keywords" content="web sitesi, web tasarım, SEO, E-Ticaret Sitesi">
+    
 
     
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="{% static 'assets/images/world.png' %}">
+    <link rel="shortcut icon" href="{% static 'assets/images/daticonfin.png' %}">
 
     <title>Datamontag Yazılım Çözümleri | Web Sitesi Tasarımı | Web Yazılım | E-ticaret Sitesi | SEO </title>
 
@@ -35,6 +37,9 @@ https://templatemo.com/tm-543-breezed
     <link rel="stylesheet" href="{% static 'assets/css/owl-carousel.css' %}">
 
     <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'assets/css/adver.css' %}">
+
 
    
 
@@ -75,17 +80,22 @@ https://templatemo.com/tm-543-breezed
                         <!-- ***** Logo Start ***** -->
                         <a href="{%  url 'index'  %}" class="logo">
                             DATAMONTAG
+
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="{%  url 'index'  %}" class="active">Anasayfa</a></li>
                             <li class="scroll-to-section"><a href="{%  url 'about'  %}">Hakkımızda</a></li>
-                            <li class="scroll-to-section"><a href="#projects">Referanslar</a></li>
-                            <li class="scroll-to-section"><a href="#projects">Hizmetler</a></li>
+                            {% if request.get_full_path == "/" or "/indexen" %}
+                                <li class="scroll-to-section"><a href="#ref">Referanslar</a></li>
+                                <li class="scroll-to-section"><a href="#projects">Hizmetler</a></li>
+                                <li class="scroll-to-section"><a href="#contact-us">İletişim</a></li> 
+
+                            {% endif %}
+                            
 
                            
-                            <li class="scroll-to-section"><a href="#contact-us">İletişim</a></li> 
                             <li class="scroll-to-section"><a href="{%  url 'indexen'  %}">EN</a></li> 
                            <!--  <div class="search-icon">
                                 <a href="#search"><i class="fa fa-search"></i></a>

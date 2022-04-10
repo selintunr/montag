@@ -1,24 +1,24 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
   <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Grow Your Business! Live Support 24/7, Meet the Most Secure E-Commerce Software Infrastructure, Web Design, Social Media Management and SEO Service!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
+
+    <meta name="description" content="İşinizi Hemen Büyütün! 7/24 Canlı Destek, En Güvenli E-Ticaret Yazılımı Altyapısı, Gelişmiş Web Tasarım, Sosyal Medya Yönetimi ve SEO Hizmetiyle Hemen Tanışın!">
     <meta name="author" content="">
     <meta name=”robots” content="index, follow">
-    <meta name="keywords" content="website, web design, SEO, E-commerce website">
+    <meta name="keywords" content="web sitesi, web tasarım, SEO, E-Ticaret Sitesi">
+    
 
-
-
-
+    
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link rel="icon" href="{% static 'images/dmlogo.png' %}">
+    <link rel="shortcut icon" href="{% static 'assets/images/daticonfin.png' %}">
 
-    <title>Datamontag Software Solutions</title>
+    <title>Datamontag Software Solutions | Web Site Design | E-commerce Site | SEO Solutions </title>
 
 <!--
 
@@ -37,11 +37,26 @@ https://templatemo.com/tm-543-breezed
     <link rel="stylesheet" href="{% static 'assets/css/owl-carousel.css' %}">
 
     <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'assets/css/adver.css' %}">
+
+
    
 
+    
 
 
     </head>
+
+
+
+
+
+
+
+
+
+     
     
     <body>
     
@@ -63,19 +78,24 @@ https://templatemo.com/tm-543-breezed
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="{%  url 'indexen'  %}" class="logo">
+                        <a href="{%  url 'index'  %}" class="logo">
                             DATAMONTAG
+
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#about">About</a></li>
-                            <li class="scroll-to-section"><a href="#projects">References</a></li>
-                            <li class="scroll-to-section"><a href="#projects">Services</a></li>
+                            <li class="scroll-to-section"><a href="{%  url 'index'  %}" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="{%  url 'about'  %}">About</a></li>
+                            {% if request.get_full_path == "/" or "/indexen" %}
+                                <li class="scroll-to-section"><a href="#ref">References</a></li>
+                                <li class="scroll-to-section"><a href="#projects">Servıces</a></li>
+                                <li class="scroll-to-section"><a href="#contact-us">Contact</a></li> 
 
-                    
-                            <li class="scroll-to-section"><a href="#contact-us">Contact</a></li> 
+                            {% endif %}
+                            
+
+                           
                             <li class="scroll-to-section"><a href="{%  url 'index'  %}">TR</a></li> 
                            <!--  <div class="search-icon">
                                 <a href="#search"><i class="fa fa-search"></i></a>

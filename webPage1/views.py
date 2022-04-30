@@ -4,7 +4,7 @@ from django.contrib import messages
 
 import requests
 
-from webPage1.models import staticAboutModel,staticAboutModel2,referansi,referansi2
+from webPage1.models import staticAboutModel,staticAboutModel2,referansi,referansi2,contactFormModel2
 from webPage1.forms import contactForm, subForm,contactForm2, subForm2
 
 
@@ -14,6 +14,8 @@ def index(request):
 
 
     context['form'] = contactForm()
+
+
     context['subForm'] = subForm()
     context['refer'] = referansi.objects.all()
 
@@ -27,7 +29,7 @@ def index(request):
         return render(request, "index.html", context)
 
 
-
+    
         
 
     if request.method == "POST":
@@ -50,17 +52,17 @@ def indexen(request):
     context = dict()
 
 
-    context['form'] = contactForm2()
+    context['form2'] = contactForm2()
     context['subForm'] = subForm2()
-    context['refer'] = referansi2.objects.all()
+    context['refer'] = referansi.objects.all()
 
     if request.method == "POST":
-        form = contactForm2(request.POST)
-        if form.is_valid():
-            form.save()
+        form2 = contactForm2(request.POST)
+        if form2.is_valid():
+            form2.save()
             return redirect('indexen')
     else:
-        context['form'] = contactForm()
+        context['form2'] = contactForm2()
         return render(request, "index-en.html", context)
 
     if request.method == "POST":
@@ -90,13 +92,17 @@ def about(request):
     return render(request, 'about.html', context)   
 
 
-def hizmet(request):   
-    context = dict()
-    a = staticAboutModel.objects.all()
-    print("----------------------", a)
-    context['hizmet'] = staticAboutModel.objects.all()
 
-    return render(request, 'hizmet.html', context)             
+
+def abouten(request):   
+    context = dict()
+    a = staticAboutModel2.objects.all()
+    print("----------------------", a)
+    context['about2'] = staticAboutModel2.objects.all()
+
+    return render(request, 'about-en.html', context)             
+
+
 
 
 def seo(request):
@@ -107,8 +113,8 @@ def sosyal(request):
     return render(request, 'sosyal.html')    
 
 
-def web(request):
-    return render(request, 'web.html')    
+def abouten(request):
+    return render(request, 'about-en.html')    
 
 def yazılım(request):
     return render(request, 'yazılım.html')                    

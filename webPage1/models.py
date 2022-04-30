@@ -40,7 +40,7 @@ class staticAboutModel(models.Model):
 
 class referansi(models.Model):
     title1_Image = models.ImageField(null=True, blank=True, upload_to='refer')
-    title2_adres = models.CharField(null=True, blank=True , max_length=100, verbose_name='url')
+    link = models.URLField(max_length = 200, null=True)
    
     
 
@@ -67,7 +67,7 @@ class subFormModel2(models.Model):
 
 
 class staticAboutModel2(models.Model):
-    title1_Image = models.ImageField(null=True, blank=True, upload_to='about')
+    title1_Image = models.ImageField(null=True, blank=True, upload_to='about2')
     title2 = models.CharField(max_length=100, verbose_name='Sağ Başlık')
     content = models.CharField(max_length=1300, verbose_name='İçerik')
     content2 = models.CharField(max_length=1300, verbose_name='İçerik2')

@@ -337,13 +337,13 @@
 
   
     <section  class="customer-logos slider1">
-    {% for ab in refer %}
+    {% for x in refer %}
     
        
         <div style="margin: 0px 20px;" class="slide1">
 
-            <a href="{{ ab.title2_adres.url }}"></a>
-            <img src="{{ ab.title1_Image.url }}">
+            <a href="{{x.link}}">
+            <img src="{{ x.title1_Image.url }}">
         </div></a>
     {% endfor %}
 

@@ -160,7 +160,7 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <a href="{%  url 'about'  %}" class="main-button-icon">
+                            <a href="{%  url 'abouten'  %}" class="main-button-icon">
                                   more <i class="fa fa-arrow-right"></i>
                             </a>
                         </div>
@@ -171,13 +171,12 @@
                 <div class="right-text-content">
                     <p> Datamontag Web Services: 
                       <br> <br>
-                      Tamamen kodla oluşturulmuş alt yapı, güncel tasarımlar, template güncelleme, admin paneli entegrasyonu ve özelleştirmesidir. 
-                      Buna ek olarak SEO Hizmeti vermekte ve Web Sızma Testlerinden geçen başarılı ve korunaklı, SSL Sertifikalı web siteleri oluşturmaktayız.
+                      Django-based infrastructure with modern designs, template updates, admin panel integration and customization.
+                       Additionally, we are providing SEO Services and a safe website with SSL certificate.
                       <br><br>
-                      Bununla beraber CRM Sistemleri, Whatsapp, Telegram ve Slack üzerinden Chatbot hizmeti sağlamaktayız. 
-                      Yapay zeka tarafında, gelişmiş 
-                      IoT yazılımlarımız, veri madenciliği (data mining)  ve optimizasyonu hizmeti sunuyoruz.
-                       Bununla birlikte  İş güvenliği yazılımları, akıllı kart yazılımları, RFID , hizmetimiz de mevcut.
+                      
+                        We are providing CRM Systems, Chatbot services through WhatsApp, Telegram, Slack. We have advanced AI Services such as IoT softwares,
+                        data mining and optimization. We also provide Smart Card, RFID services.
                       <br>
                       <br>
                       
@@ -293,7 +292,8 @@
                   <h2>Stay Connected!</h2>
               </div>
               <div class="subscribe-content">
-                  <p>Datamontag ekibi olarak kendimizi geliştirmek için sürekli çalışıyoruz. Sunacağımız yeni içerik ve hizmetlerden haberdar olmak için bizi takipte kalın.</p>
+                  <p> As Datamontag family, we are constantly working to improve ourselves.
+                       Don’t forget to subscribe and stay informed with our latest content!</p>
                   <div class="subscribe-form">
                       <form id="subscribe-now" action="" method="POST">
                           {% csrf_token %}
@@ -335,13 +335,13 @@
 
   
     <section  class="customer-logos slider1">
-    {% for ab in refer %}
+    {% for x in refer %}
     
        
         <div style="margin: 0px 20px;" class="slide1">
 
-            <a href="{{ ab.title2_adres.url }}"></a>
-            <img src="{{ ab.title1_Image.url }}">
+            <a href="{{x.link}}">
+            <img src="{{ x.title1_Image.url }}">
         </div></a>
     {% endfor %}
 
@@ -386,6 +386,10 @@
 
 
 
+<!-- ***** REFERANSLAR KISMI  BİTİŞ ***** -->
+
+
+
 
 
 
@@ -397,8 +401,7 @@
             <div class="col-lg-4 col-md-4 col-xs-12">
                 <div class="left-text-content">
                     <div class="section-heading">
-                        <h7>İletişim</h7>
-                        <h2>Bizimle İletişime Geçin!</h2>
+                        <h2>Contact us now!</h2>
                     </div>
                     <ul class="contact-info">
                         <li><img src="{% static 'assets/images/mail.png' %}" width="30px" height="30px alt=">info@datamontag.com</li>
@@ -413,23 +416,23 @@
                        
                       <div class="row">
                         <div class="col-md-6 col-sm-12">
-                            {{ form.username }}
+                            {{ form2.username }}
                         </div>
                         <div class="col-md-6 col-sm-12">
-                            {{ form.phone }}
+                            {{ form2.phone }}
                         </div>
                         <div class="col-md-6 col-sm-12">
-                            {{ form.email }}
+                            {{ form2.email }}
                         </div>
                         <div class="col-md-6 col-sm-12">
-                            {{ form.subject }}
+                            {{ form2.subject }}
                         </div>
                         <div class="col-lg-12">
-                            {{ form.message }}
+                            {{ form2.message }}
                         </div>
                         <div class="col-lg-12">
                           <fieldset>
-                            <button type="submit" id="form-submit" class="main-button-icon"> Gönder <i class="fa fa-arrow-right"></i></button>
+                            <button type="submit" id="form-submit" class="main-button-icon"> Send <i class="fa fa-arrow-right"></i></button>
                           </fieldset>
                         </div>
                       </div>

@@ -1,0 +1,87 @@
+{% extends 'index-en.html' %}
+
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+
+
+<!-- ***** About Area Starts ***** -->
+{% for ab in about2 %}
+
+<section class="section" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="left-text-content">
+                    <div class="section-heading">
+                        <br>
+                    </div>
+                    <div class="row">
+                       <!--- <img src="{% static 'assets/images/translogo.png' %}" alt="" height="400px" width="380px"> -->
+                       <img  src="{{ ab.title1_Image.url }}" height="400px" width="380px" >
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="right-text-content">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <style>
+
+                        #about .container {
+                            background-image: url(../images/arkaa.jpg);
+  
+                            background-size: cover;
+                        }
+
+                    </style>
+                    <p> {{ab.title2}}
+                        
+                      <br> <br> 
+                         
+                      {{ab.content}}
+                      <br>
+                      <br>
+                      {{ab.content2}}
+
+                      
+                      
+
+
+                    
+
+
+
+                      
+                    
+                  
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</section>
+<!-- ***** About Area Ends ***** -->
+
+
+{% endfor %}
+
+
+
+
+
+
+
+{% endblock  %}

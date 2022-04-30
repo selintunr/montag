@@ -23,14 +23,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name='index'),
     path('about/',views.about,name='about'),
-
     path('indexen/',views.indexen,name='indexen'),
     path('member/',views.member,name='member'),
     path('seo/',views.seo,name='seo'),
     path('sosyal/',views.sosyal,name='sosyal'),
-    path('web/',views.web,name='web'),
     path('yazılım/',views.yazılım,name='yazılım'),
-    path('hizmet/',views.hizmet,name='hizmet'),
+    path('abouten/',views.abouten,name='abouten'),
+
 
     path('webPage1/', include("webPage1.urls")),
 ]
